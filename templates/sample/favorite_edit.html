@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-wrapper">
+    <h1>推し編集</h1>
+
+    <!-- お気に入り編集フォーム -->
+    <form method="post" class="form-container">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">保存</button>
+    </form>
+
+    <!-- キャンセルボタン (home.htmlに遷移) -->
+    <a href="{% url 'sample:home' %}" class="cancel-link">←戻る</a>
+</div>
+{% endblock %}

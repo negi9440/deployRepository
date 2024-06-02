@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-wrapper">
+
+    <h1>予算登録</h1>
+    <form method="post" action="{% url 'sample:budget_create' %}" class="form-container">
+        {% csrf_token %}
+        <input type="hidden" name="favorite_id" value="{{ favorite_id }}">
+        {{ form.as_p }}
+        <button type="submit">登録</button>
+    </form>
+
+    <!-- アイテムリストのページに戻るためのリンク -->
+    <a href="{% url 'sample:item_list_with_favorite' favorite_id=favorite_id %}" class="cancel-link">←戻る</a>
+</div>
+{% endblock %}

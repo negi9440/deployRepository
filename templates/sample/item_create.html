@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="form-wrapper">
+
+    <h1>アイテム登録</h1>
+    <form method="post" action="{% url 'sample:item_create' favorite_id=favorite_id %}" class="form-container">
+        {% csrf_token %}
+        <!-- 各フィールドに対するエラーメッセージを表示 -->
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                <strong>エラー:</strong> 入力内容に問題があります。
+                <ul>
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div>
+            <label for="{{ form.name.id_for_label }}">アイテム名:</label>
+            {{ form.name }}
+        </div>
+        <div>
+            <label for="{{ form.price.id_for_label }}">価格:</label>
+            {{ form.price }}
+        </div>
+        <div>
+            <label for="{{ form.release_date.id_for_label }}">リリース日:</label>
+            {{ form.release_date }}
+        </div>
+        <div>
+            <label for="{{ form.category_name.id_for_label }}">カテゴリー:</label>
+            <input type="text" id="{{ form.category_name.id_for_label }}" name="category_name" value="{{ form.category_name.value|default_if_none:'' }}" class="form-control">
+        </div>
+        <button type="submit">登録</button>
+    </form>
+    <!-- 一覧ページへ戻るリンク -->
+    <a href="{% url 'sample:item_list_with_favorite' favorite_id=favorite_id %}" class="cancel-link">←戻る</a>
+</div>
+{% endblock %}

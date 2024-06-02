@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ item.name }}の詳細</title>
+</head>
+<body>
+    <h1>{{ item.name }}の詳細</h1>
+    <p>価格: {{ item.price|floatformat:0 }}円</p>
+    <p>リリース日: {{ item.release_date|date:"Y年m月d日" }}</p>
+    <p>カテゴリー: {{ item.category.name }}</p>
+    <!-- 購入済みチェックボックスと編集リンクがある場合は以下のようになります -->
+    <form method="post">
+        {% csrf_token %}
+        <input type="checkbox" name="purchased" {% if item.purchased %}checked{% endif %}>
+        <label for="purchased">購入済み</label>
+        <button type="submit">更新</button>
+    </form>
+
+    <a href="{% url 'sample:item_edit' item.id %}">編集</a>
+    <a href="{% url 'sample:item_list_with_favorite' favorite_id=favorite_id %}" class="btn btn-secondary">一覧に戻る</a>
+
+</body>
+</html>

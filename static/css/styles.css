@@ -1,0 +1,746 @@
+@font-face {
+    font-family: 'M PLUS Rounded 1c Black';
+    src: url('../fonts/MPLUSRounded1c-Black.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'M PLUS Rounded 1c Medium';
+    src: url('../fonts/MPLUSRounded1c-Medium.ttf') format('truetype');
+}
+
+
+/* 他のすべてのリンクに対して適用 */
+body a {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.header {
+    background-color: #FFE4ED;
+    padding: 20px;
+    text-align: center;
+}
+
+.line {
+    border-bottom: 2px solid #FF99CC;
+}
+
+.button {
+    background-color: #FF99CC;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+/* ナビゲーションのリンクには異なるフォントを設定 */
+.navbar a {
+    font-family: 'M PLUS Rounded 1c Black', sans-serif; /* ナビゲーション用のフォント */
+}
+
+
+/* 新規追加部分 */
+.navbar-custom {
+    background-color: #FFE4ED !important;
+    text-align: center;
+}
+
+.navbar-custom .navbar-brand {
+    color: #FF3131 !important;
+    display: inline-block;
+    float: none;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #F87676 !important;
+}
+
+.navbar-custom .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar-custom .navbar-collapse {
+    text-align: center;
+}
+
+
+/* 私の推したち / home.html */
+.custom-color {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #969496;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.favorite-list {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 470px;
+}
+
+ul.list-unstyled {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+ul.list-unstyled li {
+    padding: 10px;
+    border-bottom: 1px dotted #ccc;
+    display: flex;
+    align-items: center; /* 中央に配置 */
+    flex-direction: column; /* 縦に並べる */
+    gap: 5px; /* 名前とアクションの間のスペースを設定 */
+}
+
+.favorite-name {
+    flex-grow: 1;
+    text-align: center;
+    padding: 5px 0px; /* 一定のパディングを追加 */
+    white-space: normal; /* テキストを折り返す */
+}
+
+.favorite-name a {
+    color: #FF3131 !important;
+    padding: 7px 10px; /* 一定のパディングを追加 */
+    border-radius: 5px; /* 角を丸くする */
+    background-color: #FFE4ED; /* 背景色を追加 */
+    text-decoration: none; /* テキストの下線を削除 */
+    border: 3px solid #FF3131; /* ラインを追加 */
+    display: block; /* ボックススタイルにする */
+    white-space: normal; /* テキストを折り返すように設定 */
+    width: 470px; /* 一定の幅を設定 */
+    box-sizing: border-box; /* パディングを含めたボックスサイズ */
+}
+
+
+.favorite-name a:hover {
+    color: #FFE4ED !important;
+    background-color: #FF3131; /* ホバー時の背景色を追加（必要に応じて変更） */
+}
+
+.favorite-actions {
+    display: flex;
+    gap: 15px; /* 編集と削除ボタンの間のスペースを調整 */
+    margin-top: 5px; /* 名前とアクションの間にスペースを追加 */
+    justify-content: flex-end; /* ボタンを右揃えにする */
+    width: 100%; /* アクション全体を幅いっぱいに広げる */
+
+}
+
+
+.favorite-actions .edit-link,
+.favorite-actions .delete-link {
+    padding: 2px 7px;
+    border-radius: 5px;
+    background-color: white;
+    text-decoration: none;
+    border: 3px solid #FF3131;
+    color: #FF3131 !important;
+    display: inline-block;
+    white-space: nowrap; /* テキストを1行に固定 */
+    font-size: 14px; /* フォントサイズを変更 */
+}
+
+.favorite-actions .edit-link:hover,
+.favorite-actions .delete-link:hover {
+    color: #FFE4ED !important;
+    background-color: #FF3131;
+}
+
+
+
+/* 作成ボタンの色を変更 */
+.custom-button {
+    background-color: #FF3131; /* 背景色 */
+    border: 2px solid #FF3131; /* フチにラインを設定 */
+    color: white; /* テキストの色 */
+    position: absolute; /* 絶対配置 */
+    left: 540px; /* 手動で設定したい位置に調整 */
+    top: 120px; /* 手動で設定したい位置に調整 */
+    border-radius: 8px; /* 角を丸くする（必要に応じて変更） */
+    padding: 5px 10px; /* パディングを設定（必要に応じて変更） */
+}
+
+.custom-button:hover {
+    color: #FF3131; /* テキストの色 */
+    background-color: #FFE4ED; /* ホバー時の背景色 */
+    border-color: #FF3131; /* ホバー時のフチの色 */
+}
+
+/* 親要素の相対配置を設定 */
+.relative-section {
+    position: relative;
+}
+
+
+
+
+/* フォームの統一スタイル */
+.form-container {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #969496;
+    text-align: left; /* ラベルとフィールドを左揃え */
+    margin: 0 auto; /* センター表示 */
+    max-width: 700px !important; /* フォーム全体の最大幅 */
+    margin-top: 20px; /* フォーム全体をさらに下に移動 */
+    padding: 20px; /* フォーム全体にパディングを追加 */
+    border: 2px solid #FF3131; /* フォーム全体のフチにカラーを設定 */
+    border-radius: 10px; /* フォームの角を丸くする */
+}
+
+.form-container div {
+    display: flex; /* ラベルとフィールドを横に並べる */
+    justify-content: space-between; /* スペースを均等に分ける */
+    align-items: center; /* 垂直方向に中央揃え */
+    margin-bottom: 15px; /* 各フォーム行のマージン */
+}
+
+.form-container div label {
+    flex: 1; /* ラベルの幅を調整 */
+    margin-right: 10px; /* ラベルとフィールドの間のマージン */
+    font-weight: bold;
+}
+
+.form-container div input,
+.form-container div textarea,
+.form-container div select {
+    flex: 2; /* フィールドの幅を調整 */
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #969496;
+    width: 100%; /* 幅を100%にしてセンターに配置 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.form-container input,
+.form-container textarea {
+    color: #969496; /* ユーザーが入力したテキストのカラーを設定 */
+}
+
+
+.form-container .form-group {
+    display: flex; /* ラベルとフィールドを横に並べる */
+    justify-content: space-between; /* スペースを均等に分ける */
+    align-items: center; /* 垂直方向に中央揃え */
+    margin-bottom: 15px; /* 各フォーム行のマージン */
+}
+
+.form-container .form-group label {
+    flex: 1; /* ラベルの幅を調整 */
+    margin-right: 10px; /* ラベルとフィールドの間のマージン */
+    font-weight: bold;
+}
+
+.form-container .form-group input,
+.form-container .form-group textarea,
+.form-container .form-group select {
+    flex: 2; /* フィールドの幅を調整 */
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #969496;
+    width: 100%; /* 幅を100%にしてセンターに配置 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container input,
+.form-container textarea {
+    color: #969496; /* ユーザーが入力したテキストのカラーを設定 */
+}
+
+.form-container button {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: white;
+    background-color: #FF3131;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block; /* ブロック要素にして中央に配置 */
+    margin-left: auto; /* 左側のマージンを自動 */
+    margin-right: auto; /* 右側のマージンを自動 */
+}
+
+.form-container button:hover {
+    background-color: #F87676;
+}
+
+/* フォーム全体をセンターに配置するためのスタイル */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0; /* 外側のマージンをリセット */
+    width: 100%; /* 全幅にする */
+    max-width: 100%; /* 最大幅を設定 */
+    text-align: center; /* テキストを中央に配置 */
+    margin-top: 50px; /* フォーム全体をさらに下に移動 */
+}
+
+
+h1, h2 {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #969496;
+    text-align: center;
+    margin-top: 30px; /* タイトルを少し下に移動 */
+}
+
+.cancel-link {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #FF3131;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.cancel-link:hover {
+    color: #F87676;
+    text-decoration: underline;
+}
+
+
+/* リンクスタイル */
+a.btn-primary, a.btn-secondary, a.btn-warning, a.btn-danger, a.btn-info {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    margin: 5px;
+}
+
+
+/* エラーメッセージのスタイル */
+.error-message {
+    color: red;
+    font-size: 0.8em;
+}
+
+/* ヘルプテキストのスタイル */
+.help-text {
+    display: block;
+    color: grey;
+    font-size: 0.8em;
+    margin-top: 2px;
+    margin-bottom: 5px; /* 追加: ヘルプテキストと入力フィールドの間にスペースを作る */
+}
+
+/* アラートメッセージのスタイル */
+.alert {
+    color: red;
+    font-weight: bold;
+}
+
+/* 新規登録フォーム専用のスタイル */
+.signup-form .form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.signup-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.signup-form .form-group input,
+.signup-form .form-group textarea,
+.signup-form .form-group select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+/* ログインフォーム専用のスタイル */
+.login-form .form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.login-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.login-form .form-group input,
+.login-form .form-group textarea,
+.login-form .form-group select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+
+}
+
+/* パスワードリセットフォーム専用のスタイル */
+.password-reset-form .form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.password-reset-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.password-reset-form .form-group input,
+.password-reset-form .form-group textarea,
+.password-reset-form .form-group select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+
+/* 新規登録フォーム内の特定のリンクのスタイル */
+.signup-text {
+    color: grey; /* テキストの色 */
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif; /* フォント */
+    margin-top: 30px; /* 上部に余白を追加 */
+    margin-bottom: 100px;
+}
+
+.signup-text a {
+    color: #FF3131; /* リンクの通常の色 */
+    text-decoration: none; /* 下線を消す */
+}
+
+.signup-text a:hover {
+    color: #F87676; /* ホバー時の色 */
+    text-decoration: underline; /* ホバー時の下線を表示 */
+}
+
+.login-text {
+    color: grey; /* テキストの色 */
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif; /* フォント */
+    margin-top: 30px; /* 上部に余白を追加 */
+    margin-bottom: 8px;
+}
+
+.login-text a {
+    color: #FF3131; /* リンクの通常の色 */
+    text-decoration: none; /* 下線を消す */
+}
+
+.login-text a:hover {
+    color: #F87676; /* ホバー時の色 */
+    text-decoration: underline; /* ホバー時の下線を表示 */
+}
+
+/* パスワードリセットフォーム内の特定のリンクのスタイル */
+.password-reset-text {
+    color: grey; /* テキストの色 */
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif; /* フォント */
+    margin-top: 20px; /* 上部に余白を追加 */
+    margin-bottom: 100px; /* 下に余白を追加 */
+}
+
+.password-reset-text a {
+    color: #FF3131; /* リンクの通常の色 */
+    text-decoration: none; /* 下線を消す */
+}
+
+.password-reset-text a:hover {
+    color: #F87676; /* ホバー時の色 */
+    text-decoration: underline; /* ホバー時の下線を表示 */
+}
+
+/* ソートフォームのスタイル */
+.sort-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 50px; /* フォーム全体をさらに下に移動 */
+}
+
+.sort-form .form-group {
+    display: flex;
+    align-items: center;
+    margin-right: 1px;
+}
+
+/* .sort-form label {
+    margin-right: 0px;
+} */
+
+.sort-form .form-control {
+    margin-right: 2px;
+}
+
+.sort-form button {
+    background-color: #b8b7b8;
+    color: white;
+    border: 2px solid #b8b7b8; /* ボーダーを追加 */
+    margin-left: 2px;
+}
+
+.sort-form button:hover {
+    background-color: #b8b7b8;
+    border-color: #969496; /* ホバー時のボーダーの色を変更 */
+    color: white;
+}
+
+
+/* ドロップダウンリストのスタイル */
+.sort-form .form-control {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #969496; /* テキストの色 */
+    background-color: white; /* 背景色 */
+    border: 2px solid #969496; /* ボーダーの色 */
+    border-radius: 5px;
+    padding: 5px 10px; /* パディング */
+    margin-right: 2px;
+}
+
+
+/* ドロップダウンリストのホバースタイル */
+.sort-form .form-control:hover {
+    background-color: #f0f0f0; /* ホバー時の背景色 */
+    border-color: #6e6d6e; /* ホバー時のボーダーの色 */
+}
+
+
+/* 購入済みアイテム表示ボタンのスタイル */
+.sort-form .purchase-button {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    background-color: #FFE4ED; /* ボタンの背景色 */
+    border: 2px solid #FFE4ED; /* ボタンのフチ */
+    color: #FF3131; /* テキストの色 */
+    padding: 5px 12px; /* ボタンの内側の余白 */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    cursor: pointer;
+}
+
+.sort-form .purchase-button:hover {
+    background-color: #FFE4ED; /* ホバー時の背景色 */
+    border-color: #FF3131; /* ホバー時のフチの色 */
+    color: #FF3131;
+}
+
+
+/* アイテムリスト */
+.item-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.item-list li {
+    padding: 10px;
+    border-bottom: 1px dotted #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.item-list .item-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.item-list .item-name {
+    font-family: 'M PLUS Rounded 1c Black', sans-serif;
+    color: #FF3131;
+    font-size: 20px;
+    /* background-color: #FFE4ED; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.item-list .item-price,
+.item-list .item-release,
+.item-list .item-category {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #969496;
+}
+
+
+.item-list button {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    margin: 5px;
+}
+
+.item-list a {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    margin: 5px;
+}
+
+
+/* 購入済みボタンのスタイル */
+.item-list .btn-success {
+    background-color: white;
+    color: #FF3131;
+    border: 2px solid #FF3131; /* ボーダーを追加 */
+    padding: 2px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item-list .btn-success:hover {
+    background-color: #FF3131;
+    border-color: #FF3131; /* ホバー時のボーダーの色を変更 */
+}
+
+/* 編集ボタンのスタイル */
+.item-list .btn-warning {
+    background-color: white;
+    color: #FF3131;
+    border: 2px solid #FF3131; /* ボーダーを追加 */
+    padding: 2px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item-list .btn-warning:hover {
+    background-color: #FF3131;
+    border-color: #FF3131; /* ホバー時のボーダーの色を変更 */
+    color: white;
+}
+
+/* 削除ボタンのスタイル */
+.item-list .btn-danger {
+    background-color: white;
+    color: #FF3131;
+    border: 2px solid #FF3131; /* ボーダーを追加 */
+    padding: 2px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item-list .btn-danger:hover {
+    background-color: #FF3131;
+    border-color: #FF3131; /* ホバー時のボーダーの色を変更 */
+}
+
+/* 共有されたアイテムがない場合のメッセージのスタイル */
+div.form-wrapper ul.item-list li.no-items-message {
+    color: #969496 !important; /* 文字の色を赤に変更 */
+    font-weight: bold !important; /* 太字に変更 */
+    margin-top: 20px !important; /* 上にマージンを追加 */
+}
+
+/* 共有リンクのスタイル */
+.share-link {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #FF3131;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px; /* 他の要素との間にスペースを追加 */
+    font-size: 20px;
+    border-bottom: 2px solid #FF3131; /* 下にラインを追加 */
+}
+
+.share-link:hover {
+    color: #969496;
+    font-size: 30px;
+    border-bottom: 2px solid #FF3131; /* 下にラインを追加 */
+
+}
+
+
+
+p a .btn.btn-primary.custom-button {
+    background-color: #FF3131; /* 背景色 */
+    border: 2px solid #FF3131; /* フチにラインを設定 */
+    color: white; /* テキストの色 */
+    position: absolute; /* 絶対配置 */
+    left: 540px; /* 手動で設定したい位置に調整 */
+    top: 115px; /* 手動で設定したい位置に調整 */
+    border-radius: 8px; /* 角を丸くする（必要に応じて変更） */
+    padding: 5px 10px; /* パディングを設定（必要に応じて変更） */
+}
+
+p a .btn.btn-primary.custom-button:hover {
+    color: #FF3131; /* テキストの色 */
+    background-color: #FFE4ED; /* ホバー時の背景色 */
+    border-color: #FF3131; /* ホバー時のフチの色 */
+}
+
+
+/* フォントとセンター配置のスタイル */
+.center-text {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    text-align: center;
+    color: #969496;
+    font-size: 25px;
+    margin: 0 auto; /* センター表示 */
+    max-width: 900px !important; /* フォーム全体の最大幅 */
+    padding: 5px; /* フォーム全体にパディングを追加 */
+    
+}
+
+/* 横一列に配置するためのスタイル */
+.budget-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* ラベルとフィールドを左揃え */
+    margin: 0 auto; /* センター表示 */
+    max-width: 900px !important; /* フォーム全体の最大幅 */
+    margin-top: 5px; /* フォーム全体をさらに下に移動 */
+    padding: -5px; /* フォーム全体にパディングを追加 */
+    border: 4px solid #969496; /* フォーム全体のフチにカラーを設定 */
+    border-radius: 10px; /* フォームの角を丸くする */
+    box-sizing: border-box; /* パディングを含めたボックスサイズ */
+}
+
+
+/* 予算リンクのスタイル */
+.budget-info a.budget-link {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
+    color: #969496 !important;
+    text-decoration: underline !important;
+}
+
+.budget-info a.budget-link:hover {
+    color: #F87676 !important;
+    text-decoration: underline !important;
+}
+
+/* 共有されたアイテムがない場合のメッセージのスタイル */
+.no-items-message {
+    font-family: 'M PLUS Rounded 1c Medium', sans-serif !important;
+    color: #969496 !important; /* 文字の色を赤に変更 */
+    font-size: 16px !important; /* フォントサイズを16pxに変更 */
+    font-weight: bold !important; /* 太字に変更 */
+    text-align: center !important; /* 中央揃え */
+    margin-top: 20px !important; /* 上にマージンを追加 */
+}

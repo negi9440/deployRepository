@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-wrapper">
+    <h1>共有されたアイテム一覧</h1>
+
+    <!-- アイテムのリスト -->
+    <ul class="item-list">
+        {% for share in shared_with_me %}
+        <li class="item-list-item">
+            <span class="item-name">{{ share.item.name }}</span> / 
+            <span class="item-price">{{ share.item.price|floatformat:0 }}円</span> / 
+            <span class="item-release">{{ share.item.release_date|date:"Y-m-d" }}</span> / 
+            <span class="item-category">{{ share.item.category.name }}</span> /
+            <span class="item-category">共有者: {{ share.owner_user.username }}</span>
+            <form action="{% url 'sample:shared_items' favorite_id=favorite_id %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <input type="hidden" name="share_id" value="{{ share.id }}">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('本当に削除してよろしいですか？');">削除</button>
+            </form>
+        </li>
+        {% empty %}
+        <li class="item-list-item no-items-message">共有されたアイテムがありません。</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'sample:item_list_with_favorite' favorite_id=favorite_id %}" class="cancel-link">←アイテム一覧</a>
+</div>
+
+    
+{% endblock %}

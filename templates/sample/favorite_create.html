@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-wrapper">
+
+    <h1>推し登録</h1>
+
+    <!-- お気に入り登録フォーム -->
+    <form method="post" action="{% url 'sample:favorite_create' %}" class="form-container">
+        {% csrf_token %}
+        <label for="name">推しの名前:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">登録</button>
+    </form>
+
+    <!-- 戻るボタン (home.htmlに遷移) -->
+    <a href="{% url 'sample:home' %}" class="cancel-link">←戻る</a>
+</div>
+{% endblock %}

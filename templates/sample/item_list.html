@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<head>
+    
+    <script type="text/javascript">
+    function promptForUsername(itemId) {
+        var username = prompt("共有するユーザー名を入力してください:");
+        if (username) {
+            var url = "/sample/share/" + itemId + "/?username=" + encodeURIComponent(username);
+            location.href = url;
+        }
+    }
+    </script>
+</head>
+<body>
+
+
+        <!-- 「新しいアイテムを追加」ボタンを「アイテム一覧」のタイトルの左側に配置し、タイトルを中央に配置 -->
+        <div class="form-wrapper">
+           <h1>アイテム一覧</h1>
+        </div>
+            <section class="d-flex align-items-center justify-content-center">
+            <p>
+                <a href="{% url 'sample:item_create' favorite_id=favorite_id %}">
+                    <button class="btn btn-primary custom-button">作成</button>
+                </a>
+           </p>
+           </section>
+
+
+    <div class="budget-info-container">
+        <div class="budget-info">
+        <!-- アイテムの合計金額表示 -->
+        <p class="center-text">アイテムの合計金額: {{ total_amount }}円 /</p>
+
+        <!-- リンクとして設置 -->
+        <a href="{% url 'sample:budget_create' %}?favorite_id={{ favorite_id }}" class="btn-link budget-link">♥</a>
+
+        <!-- 予算と残り予算の表示 -->
+        {% if budget %}
+            <p class="center-text">
+                予算: <span id="budget-display">{{ budget.budget|floatformat:0 }}</span>円 /
+                残り予算: {{ remaining_budget|floatformat:0 }}円
+            </p>
+        {% else %}
+            <p class="center-text">予算が登録されていません。</p>
+        {% endif %}
+        </div>
+    </div>
+
+
+
+
+        <!-- ソート機能 -->
+        <form method="get" action="{% url 'sample:item_list_with_favorite' favorite_id=favorite_id %}" class="sort-form">
+            <div class="form-group">
+                <select name="sort" id="sort" class="form-control">
+                    <option value="release_date" {% if sort == 'release_date' %}selected{% endif %}>リリース順</option>
+                    <option value="price_desc" {% if sort == 'price_desc' %}selected{% endif %}>価格(高)</option>
+                    <option value="price_asc" {% if sort == 'price_asc' %}selected{% endif %}>価格(低)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="category_id" id="category_id" class="form-control">
+                    <option value="">すべてのカテゴリー</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}" {% if request.GET.category_id == category.id|stringformat:"s" %}selected{% endif %}>
+                            {{ category.name }}
+                        </option>
+                    {% endfor %}☑
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">適用</button>
+            <a href="{% url 'sample:purchased_items' %}?favorite_id={{ favorite_id }}" class="btn btn-secondary purchase-button ml-3">🧸購入済み🧸</a>
+        </form>
+
+        <!-- アイテムのリスト -->
+        <ul class="list-unstyled item-list">
+            {% for item in items %}
+            <li class="item-list">
+            <span class="item-info">
+                    <a href="#" class="share-link" onclick="promptForUsername({{ item.id }}); return false;">♥</a>
+                    {% comment %} <a href="#" class="btn btn-info" onclick="promptForUsername({{ item.id }}); return false;">共有</a> {% endcomment %}
+                    <span class="item-name">{{ item.name }}</span>/ 
+                    <span class="item-price">{{ item.price|floatformat:0 }}円</span> / 
+                    <span class="item-release">{{ item.release_date | date:"Y-m-d" }}</span> / 
+                    <span class="item-category">{{ item.category.name }}</span>
+            </span>       
+                <div class="item-buttons">
+                    <form action="{% url 'sample:mark_item_purchased' item.id %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="favorite_id" value="{{ favorite_id }}">
+                        <button type="submit" class="btn btn-success" {% if item.purchased %}disabled{% endif %}>購入済みにする</button>
+                    </form>
+                    <a href="{% url 'sample:item_edit' item.id %}" class="btn btn-warning">編集</a>
+                    <a href="{% url 'sample:item_delete' item.id %}" class="btn btn-danger" onclick="return confirm('削除してよろしいですか？');">削除</a>
+                </div>
+            </li>
+            {% empty %}
+            <li class="item-list-item no-items-message">アイテムがありません。</li>
+            {% comment %} <li>アイテムがありません。</li> {% endcomment %}
+            {% endfor %}
+        </ul>
+
+    
+
+</body>
+{% endblock %}

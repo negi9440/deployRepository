@@ -11,7 +11,7 @@
         </div>
         <div>
             <label for="{{ form.price.id_for_label }}">価格</label>
-            {{ form.price }}
+            <input type="number" id="{{ form.price.id_for_label }}" name="{{ form.price.name }}" value="{{ form.price.value|floatformat:0 }}" class="form-control">
         </div>
         <div>
             <label for="{{ form.release_date.id_for_label }}">リリース日</label>
@@ -22,7 +22,6 @@
             <input type="text" id="{{ form.category_name.id_for_label }}" name="category_name" value="{{ form.category_name.value|default_if_none:'' }}" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary">更新</button>
-        
     </form>
 
     <a href="{% url 'sample:item_list_with_favorite' favorite_id=favorite.id %}" class="cancel-link">←戻る</a>

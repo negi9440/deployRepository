@@ -23255,3 +23255,73 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'home_view' not found. 'home_
 2024-06-01 23:57:51,010 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py changed, reloading.
 2024-06-01 23:57:51,621 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2024-06-01 23:57:51,621 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 14:20:37,777 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 14:20:37,777 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 14:20:41,323 [INFO] django.server: "GET / HTTP/1.1" 302 0
+2024-06-02 14:20:41,323 [INFO] django.server: "GET / HTTP/1.1" 302 0
+2024-06-02 14:20:41,407 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-02 14:20:41,407 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-02 14:20:41,419 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-02 14:20:41,419 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-02 15:05:12,698 [INFO] django.server: "GET /sample/shared_items/6/ HTTP/1.1" 200 1237
+2024-06-02 15:05:12,698 [INFO] django.server: "GET /sample/shared_items/6/ HTTP/1.1" 200 1237
+2024-06-02 15:05:12,707 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-02 15:05:12,707 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-02 15:05:14,349 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 2563
+2024-06-02 15:05:14,349 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 2563
+2024-06-02 15:05:23,780 [INFO] django.server: "GET /sample/shared_items/6/ HTTP/1.1" 200 1237
+2024-06-02 15:05:23,780 [INFO] django.server: "GET /sample/shared_items/6/ HTTP/1.1" 200 1237
+2024-06-02 15:05:25,222 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 2563
+2024-06-02 15:05:25,222 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 2563
+2024-06-02 15:30:04,031 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:30:04,031 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:30:04,718 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:30:04,718 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:30:35,485 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:30:35,485 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:30:36,172 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:30:36,172 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:30:40,702 [INFO] django.server: "GET / HTTP/1.1" 302 0
+2024-06-02 15:30:40,702 [INFO] django.server: "GET / HTTP/1.1" 302 0
+2024-06-02 15:30:40,836 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-02 15:30:40,836 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-02 15:30:42,665 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-02 15:30:42,665 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-02 15:30:51,652 [INFO] django.server: "POST /sample/login/ HTTP/1.1" 302 0
+2024-06-02 15:30:51,652 [INFO] django.server: "POST /sample/login/ HTTP/1.1" 302 0
+2024-06-02 15:30:51,671 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
+2024-06-02 15:30:51,671 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
+2024-06-02 15:30:54,296 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:30:54,296 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:30:55,969 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 1946
+2024-06-02 15:30:55,969 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 1946
+2024-06-02 15:31:35,908 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2031
+2024-06-02 15:31:35,908 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2031
+2024-06-02 15:32:13,616 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:32:13,616 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:32:14,391 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:32:14,391 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:32:19,395 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2028
+2024-06-02 15:32:19,395 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2028
+2024-06-02 15:32:23,455 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:32:23,455 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:32:26,551 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2028
+2024-06-02 15:32:26,551 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2028
+2024-06-02 15:32:29,221 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:32:29,221 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:33:08,722 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:33:08,722 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:33:09,535 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:33:09,535 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:33:17,720 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
+2024-06-02 15:33:17,720 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
+2024-06-02 15:33:18,759 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:33:18,759 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:33:20,307 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2028
+2024-06-02 15:33:20,307 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2028
+2024-06-02 15:33:22,153 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:33:22,153 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:37:01,457 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:37:01,457 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-02 15:37:02,127 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:37:02,127 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

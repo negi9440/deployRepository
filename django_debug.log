@@ -23347,3 +23347,7 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'home_view' not found. 'home_
 2024-06-02 21:21:33,621 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\my_fave\urls.py changed, reloading.
 2024-06-02 21:21:34,746 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2024-06-02 21:21:34,746 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 21:26:40,505 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\my_fave\urls.py changed, reloading.
+2024-06-02 21:26:40,505 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\my_fave\urls.py changed, reloading.
+2024-06-02 21:26:41,199 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 21:26:41,199 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

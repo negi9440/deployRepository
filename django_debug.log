@@ -23325,3 +23325,17 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'home_view' not found. 'home_
 2024-06-02 15:37:01,457 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
 2024-06-02 15:37:02,127 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2024-06-02 15:37:02,127 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-02 15:38:01,266 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:38:01,266 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6423
+2024-06-02 15:38:02,929 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2019
+2024-06-02 15:38:02,929 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2019
+2024-06-02 15:38:24,895 [INFO] django.server: "POST /sample/item/edit/3/ HTTP/1.1" 302 0
+2024-06-02 15:38:24,895 [INFO] django.server: "POST /sample/item/edit/3/ HTTP/1.1" 302 0
+2024-06-02 15:38:24,917 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
+2024-06-02 15:38:24,917 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
+2024-06-02 19:37:11,247 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2016
+2024-06-02 19:37:11,247 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2016
+2024-06-02 19:37:11,257 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-02 19:37:11,257 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-02 19:37:13,498 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
+2024-06-02 19:37:13,498 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420

@@ -23339,3 +23339,7 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'home_view' not found. 'home_
 2024-06-02 19:37:11,257 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
 2024-06-02 19:37:13,498 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
 2024-06-02 19:37:13,498 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
+2024-06-02 20:25:19,308 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2016
+2024-06-02 20:25:19,308 [INFO] django.server: "GET /sample/item/edit/3/ HTTP/1.1" 200 2016
+2024-06-02 20:25:20,925 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
+2024-06-02 20:25:20,925 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420

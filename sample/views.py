@@ -112,11 +112,6 @@ def item_create(request, favorite_id):
                 
                 messages.success(request, 'アイテムが正常に登録されました。')
                 return redirect('sample:item_list_with_favorite', favorite_id=favorite_id)
-            else:
-                form.add_error('category_name', 'カテゴリー名が入力されていません。')
-                # エラーメッセージをフォームに直接追加
-        # フォームのバリデーションエラーまたはカテゴリー名が空の場合
-        messages.error(request, '入力内容にエラーがあります。')
     else:
         form = ItemForm()  # GET リクエストの場合は空のフォームを生成
 

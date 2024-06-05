@@ -1,0 +1,60 @@
+2024-06-05 12:09:16,265 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 12:09:16,265 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 12:09:20,407 [INFO] django.server: "GET / HTTP/1.1" 302 0
+2024-06-05 12:09:20,407 [INFO] django.server: "GET / HTTP/1.1" 302 0
+2024-06-05 12:09:20,531 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-05 12:09:20,531 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-05 12:09:20,551 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-05 12:09:20,551 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-05 12:09:22,944 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-05 12:09:22,944 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-05 12:09:33,116 [INFO] django.server: "POST /sample/login/ HTTP/1.1" 302 0
+2024-06-05 12:09:33,116 [INFO] django.server: "POST /sample/login/ HTTP/1.1" 302 0
+2024-06-05 12:09:33,144 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
+2024-06-05 12:09:33,144 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
+2024-06-05 12:09:34,944 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
+2024-06-05 12:09:34,944 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
+2024-06-05 12:09:39,311 [ERROR] django.request: Internal Server Error: /sample/item/delete/3/
+Traceback (most recent call last):
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py", line 268, in item_delete
+    return redirect('sample:item_list')  # アイテム一覧ページへリダイレクト
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\urls\resolvers.py", line 803, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'item_list' not found. 'item_list' is not a valid view function or pattern name.
+2024-06-05 12:09:39,311 [ERROR] django.request: Internal Server Error: /sample/item/delete/3/
+Traceback (most recent call last):
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py", line 268, in item_delete
+    return redirect('sample:item_list')  # アイテム一覧ページへリダイレクト
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\urls\resolvers.py", line 803, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'item_list' not found. 'item_list' is not a valid view function or pattern name.
+2024-06-05 12:09:39,323 [ERROR] django.server: "GET /sample/item/delete/3/ HTTP/1.1" 500 95153
+2024-06-05 12:09:39,323 [ERROR] django.server: "GET /sample/item/delete/3/ HTTP/1.1" 500 95153
+2024-06-05 12:23:40,643 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py changed, reloading.
+2024-06-05 12:23:40,643 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py changed, reloading.
+2024-06-05 12:23:41,351 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 12:23:41,351 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

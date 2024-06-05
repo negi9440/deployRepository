@@ -264,8 +264,10 @@ def item_edit(request, item_id):
 @login_required
 def item_delete(request, item_id):
     item = get_object_or_404(Item, id=item_id)
+    favorite = item.favorite_set.first()  # 削除後のリダイレクト先のfavorite_idを取得
     item.delete()
-    return redirect('sample:item_list')  # アイテム一覧ページへリダイレクト
+    messages.success(request, 'アイテムが正常に削除されました。')
+    return redirect('sample:item_list_with_favorite', favorite_id=favorite.id)
 
 
 #アイテム購入済みページ

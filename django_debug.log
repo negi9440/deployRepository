@@ -58,3 +58,9 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'item_list' not found. 'item_
 2024-06-05 12:23:40,643 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py changed, reloading.
 2024-06-05 12:23:41,351 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2024-06-05 12:23:41,351 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 12:23:45,278 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5138
+2024-06-05 12:23:45,278 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5138
+2024-06-05 12:23:51,236 [INFO] django.server: "GET /sample/item/delete/5/ HTTP/1.1" 302 0
+2024-06-05 12:23:51,236 [INFO] django.server: "GET /sample/item/delete/5/ HTTP/1.1" 302 0
+2024-06-05 12:23:51,252 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3984
+2024-06-05 12:23:51,252 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3984

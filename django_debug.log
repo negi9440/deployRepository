@@ -1,66 +1,78 @@
-2024-06-05 12:09:16,265 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
-2024-06-05 12:09:16,265 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
-2024-06-05 12:09:20,407 [INFO] django.server: "GET / HTTP/1.1" 302 0
-2024-06-05 12:09:20,407 [INFO] django.server: "GET / HTTP/1.1" 302 0
-2024-06-05 12:09:20,531 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
-2024-06-05 12:09:20,531 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
-2024-06-05 12:09:20,551 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
-2024-06-05 12:09:20,551 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
-2024-06-05 12:09:22,944 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
-2024-06-05 12:09:22,944 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
-2024-06-05 12:09:33,116 [INFO] django.server: "POST /sample/login/ HTTP/1.1" 302 0
-2024-06-05 12:09:33,116 [INFO] django.server: "POST /sample/login/ HTTP/1.1" 302 0
-2024-06-05 12:09:33,144 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
-2024-06-05 12:09:33,144 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
-2024-06-05 12:09:34,944 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
-2024-06-05 12:09:34,944 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 6420
-2024-06-05 12:09:39,311 [ERROR] django.request: Internal Server Error: /sample/item/delete/3/
-Traceback (most recent call last):
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py", line 268, in item_delete
-    return redirect('sample:item_list')  # アイテム一覧ページへリダイレクト
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\shortcuts.py", line 48, in redirect
-    return redirect_class(resolve_url(to, *args, **kwargs))
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
-    return reverse(to, args=args, kwargs=kwargs)
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\urls\base.py", line 88, in reverse
-    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\urls\resolvers.py", line 803, in _reverse_with_prefix
-    raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'item_list' not found. 'item_list' is not a valid view function or pattern name.
-2024-06-05 12:09:39,311 [ERROR] django.request: Internal Server Error: /sample/item/delete/3/
-Traceback (most recent call last):
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py", line 268, in item_delete
-    return redirect('sample:item_list')  # アイテム一覧ページへリダイレクト
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\shortcuts.py", line 48, in redirect
-    return redirect_class(resolve_url(to, *args, **kwargs))
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
-    return reverse(to, args=args, kwargs=kwargs)
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\urls\base.py", line 88, in reverse
-    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
-  File "C:\Users\tamat\miniconda3\envs\pythonenv\lib\site-packages\django\urls\resolvers.py", line 803, in _reverse_with_prefix
-    raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'item_list' not found. 'item_list' is not a valid view function or pattern name.
-2024-06-05 12:09:39,323 [ERROR] django.server: "GET /sample/item/delete/3/ HTTP/1.1" 500 95153
-2024-06-05 12:09:39,323 [ERROR] django.server: "GET /sample/item/delete/3/ HTTP/1.1" 500 95153
-2024-06-05 12:23:40,643 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py changed, reloading.
-2024-06-05 12:23:40,643 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py changed, reloading.
-2024-06-05 12:23:41,351 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
-2024-06-05 12:23:41,351 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
-2024-06-05 12:23:45,278 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5138
-2024-06-05 12:23:45,278 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5138
-2024-06-05 12:23:51,236 [INFO] django.server: "GET /sample/item/delete/5/ HTTP/1.1" 302 0
-2024-06-05 12:23:51,236 [INFO] django.server: "GET /sample/item/delete/5/ HTTP/1.1" 302 0
-2024-06-05 12:23:51,252 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3984
-2024-06-05 12:23:51,252 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3984
+2024-06-05 13:45:43,161 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 13:45:43,161 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 13:45:47,649 [INFO] django.server: "GET / HTTP/1.1" 302 0
+2024-06-05 13:45:47,649 [INFO] django.server: "GET / HTTP/1.1" 302 0
+2024-06-05 13:45:47,752 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-05 13:45:47,752 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-05 13:46:03,126 [INFO] django.server: "POST /sample/signup/ HTTP/1.1" 200 2633
+2024-06-05 13:46:03,126 [INFO] django.server: "POST /sample/signup/ HTTP/1.1" 200 2633
+2024-06-05 13:46:32,671 [INFO] django.server: "POST /sample/signup/ HTTP/1.1" 302 0
+2024-06-05 13:46:32,671 [INFO] django.server: "POST /sample/signup/ HTTP/1.1" 302 0
+2024-06-05 13:46:32,700 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 1484
+2024-06-05 13:46:32,700 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 1484
+2024-06-05 13:46:52,185 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-05 13:46:52,185 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-05 13:46:52,913 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 13:46:52,913 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 13:50:10,735 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-05 13:50:10,735 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-05 13:50:11,489 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 13:50:11,489 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 13:50:20,498 [INFO] django.server: "GET /sample/logout/ HTTP/1.1" 302 0
+2024-06-05 13:50:20,498 [INFO] django.server: "GET /sample/logout/ HTTP/1.1" 302 0
+2024-06-05 13:50:20,528 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-05 13:50:20,528 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-05 13:50:22,367 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-05 13:50:22,367 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-05 13:50:46,796 [INFO] django.server: "POST /sample/signup/ HTTP/1.1" 200 2668
+2024-06-05 13:50:46,796 [INFO] django.server: "POST /sample/signup/ HTTP/1.1" 200 2668
+2024-06-05 13:52:51,514 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-05 13:52:51,514 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-05 13:52:58,150 [INFO] django.server: "POST /sample/login/ HTTP/1.1" 302 0
+2024-06-05 13:52:58,150 [INFO] django.server: "POST /sample/login/ HTTP/1.1" 302 0
+2024-06-05 13:52:58,164 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
+2024-06-05 13:52:58,164 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3754
+2024-06-05 13:53:00,887 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3984
+2024-06-05 13:53:00,887 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3984
+2024-06-05 13:53:04,477 [INFO] django.server: "GET /sample/budget/create/?favorite_id=3 HTTP/1.1" 200 1720
+2024-06-05 13:53:04,477 [INFO] django.server: "GET /sample/budget/create/?favorite_id=3 HTTP/1.1" 200 1720
+2024-06-05 13:53:08,870 [INFO] django.server: "POST /sample/budget/create/ HTTP/1.1" 302 0
+2024-06-05 13:53:08,870 [INFO] django.server: "POST /sample/budget/create/ HTTP/1.1" 302 0
+2024-06-05 13:53:08,893 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3976
+2024-06-05 13:53:08,893 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3976
+2024-06-05 13:53:37,748 [INFO] django.server: "GET /sample/budget/create/?favorite_id=3 HTTP/1.1" 200 1716
+2024-06-05 13:53:37,748 [INFO] django.server: "GET /sample/budget/create/?favorite_id=3 HTTP/1.1" 200 1716
+2024-06-05 13:53:42,068 [INFO] django.server: "POST /sample/budget/create/ HTTP/1.1" 302 0
+2024-06-05 13:53:42,068 [INFO] django.server: "POST /sample/budget/create/ HTTP/1.1" 302 0
+2024-06-05 13:53:42,084 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3984
+2024-06-05 13:53:42,084 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 3984
+2024-06-05 13:53:44,650 [INFO] django.server: "GET /sample/item/create/3/ HTTP/1.1" 200 2120
+2024-06-05 13:53:44,650 [INFO] django.server: "GET /sample/item/create/3/ HTTP/1.1" 200 2120
+2024-06-05 13:53:55,163 [INFO] django.server: "POST /sample/item/create/3/ HTTP/1.1" 302 0
+2024-06-05 13:53:55,163 [INFO] django.server: "POST /sample/item/create/3/ HTTP/1.1" 302 0
+2024-06-05 13:53:55,181 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5129
+2024-06-05 13:53:55,181 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5129
+2024-06-05 14:04:38,905 [INFO] django.server: "GET /sample/item/create/3/ HTTP/1.1" 200 2172
+2024-06-05 14:04:38,905 [INFO] django.server: "GET /sample/item/create/3/ HTTP/1.1" 200 2172
+2024-06-05 14:05:08,851 [INFO] django.server: "POST /sample/item/create/3/ HTTP/1.1" 200 2778
+2024-06-05 14:05:08,851 [INFO] django.server: "POST /sample/item/create/3/ HTTP/1.1" 200 2778
+2024-06-05 14:05:21,287 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5129
+2024-06-05 14:05:21,287 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5129
+2024-06-05 14:05:23,939 [INFO] django.server: "GET /sample/item/create/3/ HTTP/1.1" 200 2172
+2024-06-05 14:05:23,939 [INFO] django.server: "GET /sample/item/create/3/ HTTP/1.1" 200 2172
+2024-06-05 14:06:35,861 [INFO] django.server: "POST /sample/item/create/3/ HTTP/1.1" 200 2779
+2024-06-05 14:06:35,861 [INFO] django.server: "POST /sample/item/create/3/ HTTP/1.1" 200 2779
+2024-06-05 14:08:39,317 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py changed, reloading.
+2024-06-05 14:08:39,317 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\views.py changed, reloading.
+2024-06-05 14:08:39,985 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 14:08:39,985 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 14:08:47,100 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5129
+2024-06-05 14:08:47,100 [INFO] django.server: "GET /sample/item/list/3/ HTTP/1.1" 200 5129
+2024-06-05 14:08:49,002 [INFO] django.server: "GET /sample/item/create/3/ HTTP/1.1" 200 2172
+2024-06-05 14:08:49,002 [INFO] django.server: "GET /sample/item/create/3/ HTTP/1.1" 200 2172
+2024-06-05 14:08:56,735 [INFO] django.server: "POST /sample/item/create/3/ HTTP/1.1" 200 2779
+2024-06-05 14:08:56,735 [INFO] django.server: "POST /sample/item/create/3/ HTTP/1.1" 200 2779
+2024-06-05 14:23:57,983 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-05 14:23:57,983 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
+2024-06-05 14:23:58,856 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 14:23:58,856 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

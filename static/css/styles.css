@@ -173,7 +173,6 @@ ul.list-unstyled li {
     left: 540px; /* 手動で設定したい位置に調整 */
     top: 120px; /* 手動で設定したい位置に調整 */
     border-radius: 8px; /* 角を丸くする（必要に応じて変更） */
-    padding: 5px 10px; /* パディングを設定（必要に応じて変更） */
 }
 
 .custom-button:hover {
@@ -186,8 +185,6 @@ ul.list-unstyled li {
 .relative-section {
     position: relative;
 }
-
-
 
 
 /* フォームの統一スタイル */
@@ -681,7 +678,7 @@ p a .btn.btn-primary.custom-button {
     background-color: #FF3131; /* 背景色 */
     border: 2px solid #FF3131; /* フチにラインを設定 */
     color: white; /* テキストの色 */
-    position: absolute; /* 絶対配置 */
+    
     left: 540px; /* 手動で設定したい位置に調整 */
     top: 115px; /* 手動で設定したい位置に調整 */
     border-radius: 8px; /* 角を丸くする（必要に応じて変更） */

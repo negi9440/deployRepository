@@ -65,6 +65,11 @@ class BudgetForm(forms.ModelForm):
             'budget': forms.NumberInput(attrs={'step': '0.01'})
         }
         
+    def clean_budget(self):
+        budget = self.cleaned_data['budget']
+        if budget < 0:
+            raise forms.ValidationError("予算は0以上の値でなければなりません。")
+        return budget
         
 
 # 新規登録フォーム
@@ -83,15 +88,29 @@ class CustomUserCreationForm(UserCreationForm):
     )
 
     class Meta:
-        model = CustomUser
+        model = get_user_model()
         fields = ['username', 'email', 'password1', 'password2']
         
     def clean_email(self):
         email = self.cleaned_data['email']
         if get_user_model().objects.filter(email=email).exists():
             raise ValidationError("このメールアドレスは既に使用されています。")
-        return email    
+        return email
     
+    def clean_password1(self):
+        password1 = self.cleaned_data.get('password1')
+        if password1 and ' ' in password1:
+            raise ValidationError("パスワードに半角スペースを含めることはできません。")
+        return password1
+    
+    def clean_password2(self):
+        password1 = self.cleaned_data.get('password1')
+        password2 = self.cleaned_data.get('password2')
+        if password1 and password2 and password1 != password2:
+            raise ValidationError("パスワードが一致しません。")
+        if password2 and ' ' in password2:
+            raise ValidationError("パスワードに半角スペースを含めることはできません。")
+        return password2
             
 #ログインフォーム
     

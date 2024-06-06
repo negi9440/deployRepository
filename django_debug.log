@@ -1378,3 +1378,19 @@ django.core.exceptions.FieldError: Invalid field name(s) given in select_related
 2024-06-07 06:31:05,816 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 3779
 2024-06-07 06:31:05,822 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
 2024-06-07 06:31:05,822 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-07 08:12:36,951 [INFO] django.server: "GET /sample/logout/ HTTP/1.1" 302 0
+2024-06-07 08:12:36,951 [INFO] django.server: "GET /sample/logout/ HTTP/1.1" 302 0
+2024-06-07 08:12:36,972 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-07 08:12:36,972 [INFO] django.server: "GET /sample/login/ HTTP/1.1" 200 1403
+2024-06-07 08:12:36,981 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-07 08:12:36,981 [INFO] django.server: "GET /static/css/styles.css HTTP/1.1" 304 0
+2024-06-07 08:12:39,413 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-07 08:12:39,413 [INFO] django.server: "GET /sample/signup/ HTTP/1.1" 200 2337
+2024-06-07 08:13:04,376 [INFO] django.server: "POST /sample/signup/ HTTP/1.1" 302 0
+2024-06-07 08:13:04,376 [INFO] django.server: "POST /sample/signup/ HTTP/1.1" 302 0
+2024-06-07 08:13:04,403 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 1549
+2024-06-07 08:13:04,403 [INFO] django.server: "GET /sample/ HTTP/1.1" 200 1549
+2024-06-07 08:23:34,228 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\my_fave\settings.py changed, reloading.
+2024-06-07 08:23:34,228 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\my_fave\settings.py changed, reloading.
+2024-06-07 08:23:34,972 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-07 08:23:34,972 [INFO] django.utils.autoreload: Watching for file changes with StatReloader

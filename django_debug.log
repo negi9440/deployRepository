@@ -76,3 +76,9 @@
 2024-06-05 14:23:57,983 [INFO] django.utils.autoreload: C:\Users\tamat\Downloads\portfolio02\my_fave\sample\forms.py changed, reloading.
 2024-06-05 14:23:58,856 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2024-06-05 14:23:58,856 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2024-06-05 17:34:10,276 [WARNING] django.request: Not Found: /sample/item/edit/8/
+2024-06-05 17:34:10,276 [WARNING] django.request: Not Found: /sample/item/edit/8/
+2024-06-05 19:27:17,048 [WARNING] django.request: Not Found: /favicon.ico
+2024-06-05 19:27:17,048 [WARNING] django.request: Not Found: /favicon.ico
+2024-06-06 21:10:59,227 [WARNING] django.request: Not Found: /favicon.ico
+2024-06-06 21:10:59,227 [WARNING] django.request: Not Found: /favicon.ico

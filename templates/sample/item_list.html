@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <head>
-    
     <script type="text/javascript">
     function promptForUsername(itemId) {
         var username = prompt("共有するユーザー名を入力してください:");
@@ -15,18 +13,15 @@
     </script>
 </head>
 <body>
-
-
         <!-- 「新しいアイテムを追加」ボタンを「アイテム一覧」のタイトルの左側に配置し、タイトルを中央に配置 -->
-        <div class="form-wrapper">
-           <h1>アイテム一覧</h1>
-        </div>
+        
             <section class="d-flex align-items-center justify-content-center">
             <p>
                 <a href="{% url 'sample:item_create' favorite_id=favorite_id %}">
                     <button class="btn btn-primary custom-button">作成</button>
                 </a>
-           </p>
+                <h2 class="custom-color ml-3">アイテム一覧</h2> <!-- ml-3はマージンを左側に設定 -->
+            </p>
            </section>
 
 

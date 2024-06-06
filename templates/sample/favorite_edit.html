@@ -5,9 +5,21 @@
     <h1>推し編集</h1>
 
     <!-- お気に入り編集フォーム -->
-    <form method="post" class="form-container">
+    <form method="post" class="form-container" novalidate>
         {% csrf_token %}
-        {{ form.as_p }}
+
+        <div>
+            <label for="{{ form.name.id_for_label }}">推しの名前:</label>
+            {{ form.name }}
+            {% if form.name.errors %}
+                <div class="error-message">
+                    {% for error in form.name.errors %}
+                        <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
         <button type="submit">保存</button>
     </form>
 

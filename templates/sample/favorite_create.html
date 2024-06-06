@@ -2,18 +2,25 @@
 
 {% block content %}
 <div class="form-wrapper">
-
     <h1>推し登録</h1>
-
-    <!-- お気に入り登録フォーム -->
-    <form method="post" action="{% url 'sample:favorite_create' %}" class="form-container">
+    <form method="post" action="{% url 'sample:favorite_create' %}" class="form-container" novalidate>
         {% csrf_token %}
-        <label for="name">推しの名前:</label>
-        <input type="text" id="name" name="name" required>
-        <button type="submit">登録</button>
+        
+        <div>
+            <label for="{{ form.name.id_for_label }}">推しの名前:</label>
+            {{ form.name }}
+            {% if form.name.errors %}
+                <div class="error-message">
+                    {% for error in form.name.errors %}
+                        <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <button type="submit" class="btn btn-primary">登録</button>
     </form>
 
-    <!-- 戻るボタン (home.htmlに遷移) -->
     <a href="{% url 'sample:home' %}" class="cancel-link">←戻る</a>
 </div>
 {% endblock %}

@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <div class="form-wrapper">
-
     <h1>アイテム登録</h1>
-    <form method="post" action="{% url 'sample:item_create' favorite_id=favorite_id %}" class="form-container">
+    <form method="post" action="{% url 'sample:item_create' favorite_id=favorite_id %}" class="form-container" novalidate>
         {% csrf_token %}
         <!-- 全体のエラーメッセージ -->
         {% if form.non_field_errors %}
@@ -21,30 +19,46 @@
         <div>
             <label for="{{ form.name.id_for_label }}">アイテム名:</label>
             {{ form.name }}
-            {% for error in form.name.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
+            {% if form.name.errors %}
+                <div class="error-message">
+                    {% for error in form.name.errors %}
+                        <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
         <div>
             <label for="{{ form.price.id_for_label }}">価格:</label>
             {{ form.price }}
-            {% for error in form.price.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
+            {% if form.price.errors %}
+                <div class="error-message">
+                    {% for error in form.price.errors %}
+                        <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
         <div>
             <label for="{{ form.release_date.id_for_label }}">リリース日:</label>
             {{ form.release_date }}
-            {% for error in form.release_date.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
+            {% if form.release_date.errors %}
+                <div class="error-message">
+                    {% for error in form.release_date.errors %}
+                        <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
         <div>
             <label for="{{ form.category_name.id_for_label }}">カテゴリー:</label>
-            <input type="text" id="{{ form.category_name.id_for_label }}" name="category_name" value="{{ form.category_name.value|default_if_none:'' }}" class="form-control">
-            {% for error in form.category_name.errors %}
-                <span class="text-danger">{{ error }}</span>
-            {% endfor %}
+            {{ form.category_name }}
+            {% if form.category_name.errors %}
+                <div class="error-message">
+                    {% for error in form.category_name.errors %}
+                        <span class="text-danger">{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
         <button type="submit">登録</button>
     </form>

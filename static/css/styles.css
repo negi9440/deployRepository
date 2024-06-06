@@ -169,9 +169,6 @@ ul.list-unstyled li {
     background-color: #FF3131; /* 背景色 */
     border: 2px solid #FF3131; /* フチにラインを設定 */
     color: white; /* テキストの色 */
-    position: absolute; /* 絶対配置 */
-    left: 540px; /* 手動で設定したい位置に調整 */
-    top: 120px; /* 手動で設定したい位置に調整 */
     border-radius: 8px; /* 角を丸くする（必要に応じて変更） */
 }
 
@@ -201,15 +198,12 @@ ul.list-unstyled li {
 }
 
 .form-container div {
-    display: flex; /* ラベルとフィールドを横に並べる */
-    justify-content: space-between; /* スペースを均等に分ける */
-    align-items: center; /* 垂直方向に中央揃え */
-    margin-bottom: 15px; /* 各フォーム行のマージン */
+    margin-bottom: 10px; /* 各フォーム行のマージンを増やす */
 }
 
-.form-container div label {
-    flex: 1; /* ラベルの幅を調整 */
-    margin-right: 10px; /* ラベルとフィールドの間のマージン */
+.form-container .form-group label {
+    display: block; /* ラベルをブロック要素にする */
+    margin-bottom: 5px; /* ラベルとフィールドの間のマージン */
     font-weight: bold;
 }
 
@@ -224,39 +218,7 @@ ul.list-unstyled li {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-}
-
-
-.form-container input,
-.form-container textarea {
-    color: #969496; /* ユーザーが入力したテキストのカラーを設定 */
-}
-
-
-.form-container .form-group {
-    display: flex; /* ラベルとフィールドを横に並べる */
-    justify-content: space-between; /* スペースを均等に分ける */
-    align-items: center; /* 垂直方向に中央揃え */
-    margin-bottom: 15px; /* 各フォーム行のマージン */
-}
-
-.form-container .form-group label {
-    flex: 1; /* ラベルの幅を調整 */
-    margin-right: 10px; /* ラベルとフィールドの間のマージン */
-    font-weight: bold;
-}
-
-.form-container .form-group input,
-.form-container .form-group textarea,
-.form-container .form-group select {
-    flex: 2; /* フィールドの幅を調整 */
-    font-family: 'M PLUS Rounded 1c Medium', sans-serif;
-    color: #969496;
-    width: 100%; /* 幅を100%にしてセンターに配置 */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    margin-top: 5px; /* フィールドとエラーメッセージの間のマージン */
 }
 
 .form-container input,
@@ -308,6 +270,7 @@ h1, h2 {
     color: #FF3131;
     text-decoration: none;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .cancel-link:hover {
@@ -327,6 +290,7 @@ a.btn-primary, a.btn-secondary, a.btn-warning, a.btn-danger, a.btn-info {
 .error-message {
     color: red;
     font-size: 0.8em;
+    margin-top: 5px;
 }
 
 /* ヘルプテキストのスタイル */
@@ -678,11 +642,11 @@ p a .btn.btn-primary.custom-button {
     background-color: #FF3131; /* 背景色 */
     border: 2px solid #FF3131; /* フチにラインを設定 */
     color: white; /* テキストの色 */
-    
-    left: 540px; /* 手動で設定したい位置に調整 */
-    top: 115px; /* 手動で設定したい位置に調整 */
     border-radius: 8px; /* 角を丸くする（必要に応じて変更） */
     padding: 5px 10px; /* パディングを設定（必要に応じて変更） */
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: -60px;
 }
 
 p a .btn.btn-primary.custom-button:hover {

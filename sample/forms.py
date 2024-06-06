@@ -9,6 +9,32 @@ from django.utils.translation import gettext_lazy as _
 
 class ItemForm(forms.ModelForm):
     category_name = forms.CharField(max_length=100, label='カテゴリー')
+    
+    category_name = forms.CharField(
+        max_length=100,
+        label='カテゴリー',
+        error_messages={'required': 'このフィールドは必須です。'}
+    )
+
+    name = forms.CharField(
+        max_length=100,
+        label='アイテム名',
+        error_messages={'required': 'このフィールドは必須です。'}
+    )
+
+    price = forms.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        label='価格',
+        error_messages={'required': 'このフィールドは必須です。'}
+    )
+
+    release_date = forms.DateField(
+        widget=forms.DateInput(attrs={'type': 'date'}),
+        label='リリース日',
+        error_messages={'required': 'このフィールドは必須です。'}
+    )
+
 
     class Meta:
         model = Item
@@ -49,6 +75,18 @@ class ShareForm(forms.ModelForm):
         fields = ['shared_with_user']
 
 class BudgetForm(forms.ModelForm):
+    month = forms.DateField(
+        widget=forms.DateInput(attrs={'type': 'date'}),
+        label='月',
+        error_messages={'required': 'このフィールドは必須です。'}
+    )
+    budget = forms.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        label='予算',
+        error_messages={'required': 'このフィールドは必須です。'}
+    )
+    
     class Meta:
         model = Budget
         fields = ['month', 'budget']
@@ -136,6 +174,12 @@ class CustomAuthenticationForm(AuthenticationForm):
 
         
 class FavoriteForm(forms.ModelForm):
+    name = forms.CharField(
+        max_length=100,
+        label='名前',
+        error_messages={'required': 'このフィールドは必須です。'}
+    )
+
     class Meta:
         model = Favorite
         fields = ['name']  # お気に入りの名前を登録するためのフィールド
